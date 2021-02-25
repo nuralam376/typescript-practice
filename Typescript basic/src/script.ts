@@ -29,32 +29,55 @@
 
 // console.log(multiply(3, 4));
 
-let a: string;
+// let a: string;
 
-a = "abc";
+// a = "abc";
 
-let b: number;
+// let b: number;
 
 // b = "abc";
-b = 5;
+// b = 5;
 
-let array: string[] = [];
+// let array: string[] = [];
 
-array.push("s");
-// array.push(5);
+// array.push("s");
+// // array.push(5);
 
-let arr: (number | string)[] = [];
+// let arr: (number | string)[] = [];
 
-arr.push("name");
-arr.push(5);
-// arr.push(false);
+// arr.push("name");
+// arr.push(5);
+// // arr.push(false);
 
-let obj: {
-  name: string;
+// let obj: {
+//   name: string;
+// };
+
+// // obj.name = "as";
+
+// obj = {
+//   name: "abc",
+// };
+
+let a: any;
+
+a = 5;
+a = "Name";
+
+console.log(a);
+
+let b: any[] = [];
+
+b.push("a");
+
+console.log(b);
+
+let c: {
+  name: any;
 };
 
-// obj.name = "as";
-
-obj = {
-  name: "abc",
+c = {
+  name: "a",
 };
+
+console.log(c);
