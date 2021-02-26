@@ -38,15 +38,27 @@
 // obj = {
 //   name: "abc",
 // };
-var a;
-a = 5;
-a = "Name";
-console.log(a);
-var b = [];
-b.push("a");
-console.log(b);
-var c;
-c = {
-    name: "a",
+// let a: any;
+// a = 5;
+// a = "Name";
+// console.log(a);
+// let b: any[] = [];
+// b.push("a");
+// console.log(b);
+// let c: {
+//   name: any;
+// };
+// c = {
+//   name: "a",
+// };
+// console.log(c);
+// let myFunc: Function;
+// myFunc = () => {
+//   console.log("Function");
+// };
+// myFunc();
+var sum = function (a, b, c) {
+    if (c === void 0) { c = "abc"; }
+    return a + b;
 };
-console.log(c);
+console.log(sum("3", 4));

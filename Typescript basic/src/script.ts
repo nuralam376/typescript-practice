@@ -59,25 +59,39 @@
 //   name: "abc",
 // };
 
-let a: any;
+// let a: any;
 
-a = 5;
-a = "Name";
+// a = 5;
+// a = "Name";
 
-console.log(a);
+// console.log(a);
 
-let b: any[] = [];
+// let b: any[] = [];
 
-b.push("a");
+// b.push("a");
 
-console.log(b);
+// console.log(b);
 
-let c: {
-  name: any;
+// let c: {
+//   name: any;
+// };
+
+// c = {
+//   name: "a",
+// };
+
+// console.log(c);
+
+// let myFunc: Function;
+
+// myFunc = () => {
+//   console.log("Function");
+// };
+
+// myFunc();
+
+let sum = (a: string, b: number, c: string = "abc"): string => {
+  return a + b;
 };
 
-c = {
-  name: "a",
-};
-
-console.log(c);
+console.log(sum("3", 4));
