@@ -57,8 +57,28 @@
 //   console.log("Function");
 // };
 // myFunc();
-var sum = function (a, b, c) {
-    if (c === void 0) { c = "abc"; }
-    return a + b;
+// let sum = (a: string, b: number, c: string = "abc"): string => {
+//   return a + b;
+// };
+// console.log(sum("3", 4));
+// type stringOrNum = string | number;
+// type userType = { name: string; age: number };
+// const userDetails = (id: stringOrNum, user: userType) => {
+//   console.log(
+//     `User id is ${id}, user name : ${user.name}, user age : ${user.age}`
+//   );
+// };
+// const sayHello = (user: userType) => {
+//   console.log(`User name ${user.name} and age is {user.age}`);
+// };
+var add;
+add = function (a, b, c) {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
 };
-console.log(sum("3", 4));
+var userDetails;
+userDetails = function (userType) { };

@@ -90,8 +90,35 @@
 
 // myFunc();
 
-let sum = (a: string, b: number, c: string = "abc"): string => {
-  return a + b;
+// let sum = (a: string, b: number, c: string = "abc"): string => {
+//   return a + b;
+// };
+
+// console.log(sum("3", 4));
+
+// type stringOrNum = string | number;
+// type userType = { name: string; age: number };
+
+// const userDetails = (id: stringOrNum, user: userType) => {
+//   console.log(
+//     `User id is ${id}, user name : ${user.name}, user age : ${user.age}`
+//   );
+// };
+
+// const sayHello = (user: userType) => {
+//   console.log(`User name ${user.name} and age is {user.age}`);
+// };
+
+let add: (x: number, y: number, z: string) => number;
+
+add = (a: number, b: number, c: string) => {
+  if (c === "add") {
+    return a + b;
+  } else {
+    return a - b;
+  }
 };
 
-console.log(sum("3", 4));
+let userDetails: (user: { name: string; age: number }) => void;
+
+userDetails = (userType: { name: string; age: number }) => {};
