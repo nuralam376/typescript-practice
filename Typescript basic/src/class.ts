@@ -1,13 +1,9 @@
 class Player {
-  name: string;
-  age: number;
-  country: string;
-
-  constructor(n: string, a: number, c: string) {
-    this.name = n;
-    this.age = a;
-    this.country = c;
-  }
+  constructor(
+    public name: string,
+    private age: number,
+    readonly country: string
+  ) {}
 
   play() {
     console.log(
@@ -25,4 +21,9 @@ players.push(abc);
 players.push(def);
 
 abc.play();
+abc.name = "as";
+// abc.age = 45;
+// abc.country = "India";
 console.log(abc.name);
+// console.log(abc.age);
+console.log(abc.country);
