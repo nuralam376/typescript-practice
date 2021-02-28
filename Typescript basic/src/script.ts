@@ -109,16 +109,34 @@
 //   console.log(`User name ${user.name} and age is {user.age}`);
 // };
 
-let add: (x: number, y: number, z: string) => number;
+// let add: (x: number, y: number, z: string) => number;
 
-add = (a: number, b: number, c: string) => {
-  if (c === "add") {
-    return a + b;
-  } else {
-    return a - b;
-  }
+// add = (a: number, b: number, c: string) => {
+//   if (c === "add") {
+//     return a + b;
+//   } else {
+//     return a - b;
+//   }
+// };
+
+// let userDetails: (user: { name: string; age: number }) => void;
+
+// userDetails = (userType: { name: string; age: number }) => {};
+
+interface Rectangle {
+  width: number;
+  height: number;
+}
+
+function drawRectangle(options: Rectangle) {
+  let width = options.width;
+  let height = options.height;
+}
+
+let options = {
+  width: 800,
+  height: 455,
+  length: 877,
 };
 
-let userDetails: (user: { name: string; age: number }) => void;
-
-userDetails = (userType: { name: string; age: number }) => {};
+drawRectangle(options);
