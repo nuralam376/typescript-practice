@@ -7,5 +7,8 @@ class Player {
     play() {
         console.log(`${this.name} from ${this.country} is ${this.age} is years old`);
     }
+    getProperty() {
+        return this.age;
+    }
 }
 export default Player;

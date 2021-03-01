@@ -1,17 +1,15 @@
 import Player from "./classes/Player.js";
 
-const abc = new Player("Abc", 40, "Bd");
-const def = new Player("Def", 25, "Eng");
+let abc: Player;
 
-const players: Player[] = [];
+abc = new Player("Abc", 30, "BD'");
 
-players.push(abc);
-players.push(def);
+// const players: Player[] = [];
+
+// players.push(abc);
+// players.push(def);
 
 abc.play();
 abc.name = "as";
-// abc.age = 45;
-// abc.country = "India";
-console.log(abc.name);
-// console.log(abc.age);
-console.log(abc.country);
+abc.play();
+console.log(abc.getProperty());
