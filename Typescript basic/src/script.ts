@@ -123,20 +123,33 @@
 
 // userDetails = (userType: { name: string; age: number }) => {};
 
-interface Rectangle {
-  width: number;
-  height: number;
-}
+// interface Rectangle {
+//   width: number;
+//   height: number;
+// }
 
-function drawRectangle(options: Rectangle) {
-  let width = options.width;
-  let height = options.height;
-}
+// function drawRectangle(options: Rectangle) {
+//   let width = options.width;
+//   let height = options.height;
+// }
 
-let options = {
-  width: 800,
-  height: 455,
-  length: 877,
+// let options = {
+//   width: 800,
+//   height: 455,
+//   length: 877,
+// };
+
+// drawRectangle(options);
+
+const addId = <T>(obj: T) => {
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
 };
 
-drawRectangle(options);
+let user = addId({
+  name: "Abc",
+  age: 29,
+  country: "Bd",
+});
+
+console.log(user);
