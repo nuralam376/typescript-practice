@@ -165,16 +165,45 @@
 
 // console.log(user);
 
-interface ApiResponse<T> {
-  status: number;
-  type: string;
-  data: T;
-}
+// interface ApiResponse<T> {
+//   status: number;
+//   type: string;
+//   data: T;
+// }
 
-const response1: ApiResponse<object> = {
-  status: 1,
-  type: "as",
-  data: {
-    name: "test",
-  },
-};
+// const response1: ApiResponse<object> = {
+//   status: 1,
+//   type: "as",
+//   data: {
+//     name: "test",
+//   },
+// };
+
+// enum RType {
+//   SUCCESS,
+//   FAILURE,
+//   UNAUTHENTICATED,
+//   UNAUTHORIZED,
+// }
+
+// interface ApiResponse<T> {
+//   status: number;
+//   type: RType;
+//   data: T;
+// }
+
+// const response1: ApiResponse<object> = {
+//   status: 4,
+//   type: RType.FAILURE,
+//   data: {},
+// };
+
+// console.log(response1);
+
+let a = [3, "hello", { p: 3 }];
+
+let b: [number, string, object] = [4, "worlf", { p: 3 }];
+
+b.push("as");
+
+console.log(b);
