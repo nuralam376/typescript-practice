@@ -141,15 +141,40 @@
 
 // drawRectangle(options);
 
-const addId = <T>(obj: T) => {
-  let id = Math.floor(Math.random() * 100);
-  return { ...obj, id };
+// const addID = <
+//   T extends {
+//     name: string;
+//     age: number;
+//     country: string;
+//   }
+// >(
+//   obj: T
+// ) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+
+// let user = addID({
+//   name: "Abc",
+//   age: 30,
+//   country: "",
+// });
+
+// // user.country = "eng";
+// // let user = addID("as");
+
+// console.log(user);
+
+interface ApiResponse<T> {
+  status: number;
+  type: string;
+  data: T;
+}
+
+const response1: ApiResponse<object> = {
+  status: 1,
+  type: "as",
+  data: {
+    name: "test",
+  },
 };
-
-let user = addId({
-  name: "Abc",
-  age: 29,
-  country: "Bd",
-});
-
-console.log(user);
