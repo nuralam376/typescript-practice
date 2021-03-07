@@ -1,4 +1,6 @@
-class Invoice {
+import { hasFormatter } from "../interfaces/hasFormatter";
+
+class Invoice implements hasFormatter {
   //   readonly client: string;
   //   private details: string;
   //   public amount: number;
