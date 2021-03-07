@@ -1,4 +1,5 @@
 import Invoice from "./classes/Invoice.js";
+import { ListTemplate } from "./classes/ListTemplate.js";
 import Payment from "./classes/Payment.js";
 import { hasFormatter } from "./interfaces/hasFormatter";
 let invOne = new Invoice("Abc", "Work for abc", 200);
@@ -63,6 +64,9 @@ const toForm = document.querySelector("#tofrom") as HTMLInputElement;
 const details = document.querySelector("#details") as HTMLInputElement;
 const amount = document.querySelector("#amount") as HTMLInputElement;
 
+const ul = document.querySelector("ul")!;
+const list = new ListTemplate(ul);
+
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
@@ -74,5 +78,35 @@ form.addEventListener("submit", (e: Event) => {
     doc = new Invoice(toForm.value, details.value, amount.valueAsNumber);
   }
 
+  list.render(doc, type.value, "end");
+
   console.log(doc);
 });
+
+const addUID = <T extends { name: string }>(obj: T) => {
+  const uid = Math.floor(Math.random() * 100);
+  return { ...obj, uid };
+};
+
+const user = { name: "name", age: 30 };
+
+let result = addUID(user);
+console.log(result);
+
+interface Resource<T> {
+  uid: number;
+  resourseName: string;
+  data: T;
+}
+
+const docThree: Resource<string> = {
+  uid: 25,
+  resourseName: "obj",
+  data: "",
+};
+
+const docFour: Resource<object> = {
+  uid: 30,
+  resourseName: "str",
+  data: {},
+};
