@@ -72,10 +72,13 @@ form.addEventListener("submit", (e: Event) => {
 
   let doc: hasFormatter;
 
+  let values: [string, string, number];
+  values = [toForm.value, details.value, amount.valueAsNumber];
+
   if (type.value === "payment") {
-    doc = new Payment(toForm.value, details.value, amount.valueAsNumber);
+    doc = new Payment(...values);
   } else {
-    doc = new Invoice(toForm.value, details.value, amount.valueAsNumber);
+    doc = new Invoice(...values);
   }
 
   list.render(doc, type.value, "end");
@@ -93,20 +96,34 @@ const user = { name: "name", age: 30 };
 let result = addUID(user);
 console.log(result);
 
+enum ResourceType {
+  Book,
+  Author,
+  Person,
+  Seller,
+}
+
 interface Resource<T> {
   uid: number;
-  resourseName: string;
+  resourceType: number;
   data: T;
 }
 
 const docThree: Resource<string> = {
   uid: 25,
-  resourseName: "obj",
+  resourceType: ResourceType.Author,
   data: "",
 };
 
 const docFour: Resource<object> = {
   uid: 30,
-  resourseName: "str",
+  resourceType: ResourceType.Seller,
   data: {},
 };
+
+const values2 = [33, "abc", false];
+values2[0] = "as";
+
+const numbers: [string, number, boolean] = ["abc", 23, false];
+
+// numbers[0] = 21;
