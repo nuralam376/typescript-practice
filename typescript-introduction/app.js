@@ -1,20 +1,34 @@
-var num1 = document.querySelector("#num1");
-var num2 = document.querySelector("#num2");
-var btn = document.querySelector("#btn");
-function printResult(num1, num2) {
-    return num1 + num2;
-}
-var results = [];
-btn.addEventListener("click", function () {
-    var a = +num1.value;
-    var b = +num2.value;
-    var result = printResult(a, b);
-    var resultContainer = {
-        res: result,
-        print: function () {
-            console.log("" + this.res);
-        }
+// const num1 = document.querySelector("#num1") as HTMLInputElement;
+// const num2 = <HTMLInputElement>document.querySelector("#num2");
+// const btn = document.querySelector("#btn") as HTMLButtonElement;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
     };
-    results.push(resultContainer);
-    //   results.push(3);
-});
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var User = /** @class */ (function () {
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    User.prototype.print = function () { };
+    return User;
+}());
+var Admin = /** @class */ (function (_super) {
+    __extends(Admin, _super);
+    function Admin(name, age, members) {
+        var _this = _super.call(this, name, age) || this;
+        _this.members = members;
+        return _this;
+    }
+    return Admin;
+}(User));
+// const user = new User();
