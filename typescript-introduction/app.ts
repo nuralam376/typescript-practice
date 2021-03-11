@@ -34,21 +34,27 @@
 // const user = new User("Abc", 30);
 // console.log(user.age);
 
-interface ObjectUser {
-  name: string;
-  print: () => void;
+// interface ObjectUser {
+//   name: string;
+//   print: () => void;
+// }
+
+// class User implements ObjectUser {
+//   constructor(public name: string, private age: number) {}
+
+//   print() {}
+// }
+
+// class Admin extends User {
+//   constructor(name: string, age: number, private members: string[]) {
+//     super(name, age);
+//   }
+// }
+
+// // const user = new User();
+
+function test<T extends object>(val: T) {
+  console.log(val);
 }
 
-class User implements ObjectUser {
-  constructor(public name: string, private age: number) {}
-
-  print() {}
-}
-
-class Admin extends User {
-  constructor(name: string, age: number, private members: string[]) {
-    super(name, age);
-  }
-}
-
-// const user = new User();
+test({ name: "abc", age: 25 });
