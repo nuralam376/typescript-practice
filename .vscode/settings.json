@@ -2,5 +2,6 @@
     "editor.formatOnSave": true,
     "prettier.singleQuote": true,
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Solarized Light",
+    "editor.cursorBlinking": "expand"
 }
